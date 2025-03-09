@@ -6,6 +6,12 @@ button.addEventListener('click', (e)=>{
     input = parseInt(prompt('How many boxes big do you want your sketchpad to be?'));
     size = input || size;
 
+    while (size>=100){
+        alert('Please enter a number less than 100');
+        input = parseInt(prompt('How many boxes big do you want your sketchpad to be?'));
+        size = input || size;
+    }
+
     const grid = document.querySelector('.grid');
     grid.remove();
     createGrid(size);
