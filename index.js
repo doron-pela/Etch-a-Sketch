@@ -46,6 +46,15 @@ function createGrid(size){
         if(div.matches('.box')){
             div.classList.add('hover');
         }
+
+        const r = Math.floor(Math.random()*256);
+        const g = Math.floor(Math.random()*256);
+        const b = Math.floor(Math.random()*256);
+
+        const opacity = 0.1;
+
+        div.style.backgroundColor = `rgb(${r} ${g} ${b})`;
+
     });
 
     container.appendChild(grid);
